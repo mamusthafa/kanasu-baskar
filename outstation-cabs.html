@@ -110,9 +110,22 @@
             .page-hero-container, .grid-3, .footer-container { grid-template-columns: 1fr !important; gap: 20px; }
             .hero-form-card { width: 100%; max-width: 100%; }
         }
+        @media (max-width: 900px) {
+            .testimonials-grid { grid-template-columns: 1fr !important; }
+        }
         @media (max-width: 480px) {
             .header .btn-yellow { display: none; }
         }
+
+        /* Testimonials Section */
+        .testimonials-section { background-color: #f8fafc; padding: 60px 0; }
+        .testimonials-grid { max-width: 1240px; margin: 0 auto; padding: 0 20px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+        .testimonial-card { background: #ffffff; border: 1px solid var(--border-color); border-radius: 12px; padding: 26px 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); display: flex; flex-direction: column; }
+        .quote-icon { font-size: 2.2rem; color: var(--primary-yellow); line-height: 1; margin-bottom: 8px; font-family: Georgia, serif; font-weight: bold; }
+        .testimonial-text { font-size: 0.85rem; color: #475569; line-height: 1.6; margin-bottom: 18px; flex-grow: 1; }
+        .rating { color: var(--primary-yellow); font-size: 0.82rem; margin-bottom: 10px; display: flex; gap: 3px; }
+        .client-info h4 { font-size: 0.92rem; font-weight: 700; color: #1e293b; }
+        .client-info span { font-size: 0.72rem; color: #94a3b8; }
     </style>
 </head>
 <body>
@@ -124,9 +137,9 @@
     <section class="page-hero">
         <div class="page-hero-container">
             <div>
-                <h1>BANGALORE <span>OUTSTATION CAB SERVICE</span></h1>
-                <p>Enjoy comfortable, safe outstation roundtrips and multi-day holiday travel across South India with courteous drivers and clean AC vehicles.</p>
-                <a href="tel:9187710319" class="btn-yellow"><i class="fas fa-phone-alt"></i> CALL +91 9187710319</a>
+                <h1>Outstation Cabs From Bangalore <span>— Comfortable, Safe, On Time</span></h1>
+                <p>Whether it's a family trip, business travel, or a weekend escape, book an outstation cab with an experienced driver and a fixed price upfront.</p>
+                <a href="#book" class="btn-yellow">Book Your Outstation Cab Now →</a>
             </div>
 
             <div class="hero-form-card" id="book">
@@ -177,25 +190,112 @@
         </div>
     </section>
 
-    <!-- OUTSTATION FEATURES -->
+    <!-- OUTSTATION FEATURES & DETAILS -->
     <section class="section-padding">
+        <div style="max-width: 1240px; margin: 0 auto; padding: 0 20px;">
+            <div style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 40px; align-items: start; margin-bottom: 40px;">
+                <div>
+                    <span class="section-subtitle">ABOUT OUR SERVICE</span>
+                    <h2 class="section-title" style="margin-bottom: 20px; font-size: 1.8rem;">Outstation Cabs From Bangalore</h2>
+                    <p style="font-size: 1rem; color: #475569; line-height: 1.7; margin-bottom: 20px;">Planning a road trip out of Bangalore? Kanasu Cabs provides outstation taxi and car rental with driver services for one-way and round trips across Karnataka and neighboring states. Choose from sedans, SUVs, or Innova crysta cabs, all maintained to a high standard for long-distance comfort.</p>
+                    <p style="font-size: 1rem; font-weight: 600; color: #1e293b; border-left: 3px solid var(--primary-yellow); padding-left: 12px; margin-top: 25px;">Hundreds of safe, comfortable outstation trips completed every month.</p>
+                </div>
+                
+                <div>
+                    <span class="section-subtitle">WHY CHOOSE US</span>
+                    <h2 class="section-title" style="margin-bottom: 20px; font-size: 1.8rem;">Why Choose Us</h2>
+                    <ul style="display: flex; flex-direction: column; gap: 15px; margin-top: 15px;">
+                        <li style="display: flex; align-items: center; gap: 12px; font-size: 0.95rem; color: #334155;">
+                            <i class="fas fa-check-circle" style="color: var(--primary-yellow); font-size: 1.2rem;"></i>
+                            One-way and round-trip outstation options
+                        </li>
+                        <li style="display: flex; align-items: center; gap: 12px; font-size: 0.95rem; color: #334155;">
+                            <i class="fas fa-check-circle" style="color: var(--primary-yellow); font-size: 1.2rem;"></i>
+                            Fixed per-km pricing, no last-minute add-ons
+                        </li>
+                        <li style="display: flex; align-items: center; gap: 12px; font-size: 0.95rem; color: #334155;">
+                            <i class="fas fa-check-circle" style="color: var(--primary-yellow); font-size: 1.2rem;"></i>
+                            Experienced long-distance drivers
+                        </li>
+                        <li style="display: flex; align-items: center; gap: 12px; font-size: 0.95rem; color: #334155;">
+                            <i class="fas fa-check-circle" style="color: var(--primary-yellow); font-size: 1.2rem;"></i>
+                            Well-maintained sedans, SUVs & Innovas
+                        </li>
+                        <li style="display: flex; align-items: center; gap: 12px; font-size: 0.95rem; color: #334155;">
+                            <i class="fas fa-check-circle" style="color: var(--primary-yellow); font-size: 1.2rem;"></i>
+                            24x7 booking support
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- CTA Section -->
+            <div style="background: linear-gradient(135deg, #111418 0%, #1a1e24 100%); padding: 40px; border-radius: 16px; text-align: center; color: white; margin-top: 40px; box-shadow: var(--card-shadow);">
+                <h3 style="font-size: 1.5rem; font-weight: 800; margin-bottom: 12px; color: #ffffff;">Book Your Outstation Cab →</h3>
+                <p style="color: #cbd5e1; font-size: 0.95rem; margin-bottom: 25px; max-width: 600px; margin-left: auto; margin-right: auto;">Get instant quote and confirmation via WhatsApp or Call:</p>
+                <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
+                    <a href="https://wa.me/919187710319?text=Hello%20Kanasu%20Cabs,%20I%20want%20to%20book%20an%20outstation%20cab." target="_blank" class="btn-yellow" style="background-color: #25d366; color: white; padding: 12px 28px; border-radius: 50px;"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                    <a href="tel:9187710319" class="btn-yellow" style="background-color: #ffffff; color: #000000; padding: 12px 28px; border-radius: 50px;"><i class="fas fa-phone-alt"></i> Call</a>
+                    <a href="#book" class="btn-yellow" style="padding: 12px 28px; border-radius: 50px;">Booking Form</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials-section">
         <div class="section-title-wrap">
-            <span class="section-subtitle">WHY CHOOSE OUR OUTSTATION CABS</span>
-            <h2 class="section-title">Hassle-Free Intercity Travel</h2>
+            <span class="section-subtitle">TESTIMONIALS</span>
+            <h2 class="section-title">What Our Customers Say</h2>
         </div>
 
-        <div class="grid-3">
-            <div class="info-card">
-                <h3><i class="fas fa-shield-alt" style="color:var(--primary-yellow);"></i> Safe & Well-Maintained Fleet</h3>
-                <p>Clean, disinfected AC hatchbacks, sedans, SUVs, and luxury Tempo Travellers serviced regularly for long highway road trips.</p>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="quote-icon">“</div>
+                <p class="testimonial-text">Very reliable taxi service for Mysore and Coorg trips. Reasonable per-km rates with zero hidden charges. Highly recommended Kanasu Cabs!</p>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <div class="client-info">
+                    <h4>Arjun M.</h4>
+                    <span>Bangalore</span>
+                </div>
             </div>
-            <div class="info-card">
-                <h3><i class="fas fa-user-tie" style="color:var(--primary-yellow);"></i> Expert Highway Drivers</h3>
-                <p>Polite, background-verified drivers with extensive knowledge of South Indian state routes, toll corridors, and tourist sights.</p>
+
+            <div class="testimonial-card">
+                <div class="quote-icon">“</div>
+                <p class="testimonial-text">Booked a round trip to Ooty with Kanasu Cabs. The driver was extremely professional and knew the hairpin bends perfectly. The Innova Crysta was very clean and comfortable.</p>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <div class="client-info">
+                    <h4>Vikram R.</h4>
+                    <span>Outstation Traveler</span>
+                </div>
             </div>
-            <div class="info-card">
-                <h3><i class="fas fa-file-invoice-dollar" style="color:var(--primary-yellow);"></i> Transparent Per-KM Rates</h3>
-                <p>Clear billing structure with no surprise fees. Driver allowance and per-km pricing stated upfront.</p>
+
+            <div class="testimonial-card">
+                <div class="quote-icon">“</div>
+                <p class="testimonial-text">Genuine pricing. They didn't charge any hidden night driver allowance or extra per-km fees like other operators. Highly satisfied with their outstation service.</p>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <div class="client-info">
+                    <h4>Deepa N.</h4>
+                    <span>Family Trip</span>
+                </div>
             </div>
         </div>
     </section>

@@ -14,11 +14,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Contact Kanasu Cabs - Bangalore's top Oneway & Outstation Taxi Service. Call +91 9187710319 or book online via WhatsApp.">
+        content="Book a Taxi Online in Minutes with Kanasu Cabs. Fast, reliable cabs in Bangalore for local rides, airport transfers, and outstation trips.">
     <meta name="keywords"
-        content="Contact Kanasu Cabs, Kanasu Cabs Phone Number, Bangalore Taxi Contact, Book Taxi Bangalore">
+        content="Book Cab Online, Taxi Booking Bangalore, Online Cab Booking Bangalore, Kanasu Cabs Booking, Hire Taxi Bangalore">
     <meta name="author" content="Kanasu Cabs">
-    <title>Contact Us - Kanasu Cabs Bangalore Taxi Booking</title>
+    <title>Book a Taxi Online in Minutes - Kanasu Cabs | Bangalore Cab Booking</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -198,85 +198,42 @@
             background-position: center;
             color: #ffffff;
             padding: 55px 0;
-            text-align: center;
+        }
+
+        .page-hero-container {
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            gap: 40px;
+            align-items: center;
         }
 
         .page-hero h1 {
-            font-size: 2.5rem;
+            font-size: 2.3rem;
             font-weight: 800;
             text-transform: uppercase;
-            margin-bottom: 10px;
+            line-height: 1.25;
+            margin-bottom: 14px;
         }
 
         .page-hero h1 span {
             color: var(--primary-yellow);
         }
 
-        .section-padding {
-            padding: 60px 0;
-        }
-
-        .contact-grid {
-            max-width: 1240px;
-            margin: 0 auto;
-            padding: 0 20px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-        }
-
-        .contact-info-card {
-            background: #f8fafc;
-            border: 1px solid var(--border-color);
-            border-radius: 16px;
-            padding: 30px;
-        }
-
-        .contact-info-card h3 {
-            font-size: 1.4rem;
-            font-weight: 800;
-            color: #1e293b;
-            margin-bottom: 20px;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 16px;
-            margin-bottom: 20px;
-        }
-
-        .contact-icon {
-            width: 48px;
-            height: 48px;
-            background: var(--primary-yellow);
-            color: #000000;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 1.2rem;
-            flex-shrink: 0;
-        }
-
-        .contact-details h5 {
-            font-size: 0.9rem;
-            font-weight: 700;
-            color: #1e293b;
-        }
-
-        .contact-details p {
-            font-size: 0.88rem;
-            color: #64748b;
+        .page-hero p {
+            font-size: 1.05rem;
+            color: #d0d7de;
+            margin-bottom: 25px;
         }
 
         .hero-form-card {
             background: #ffffff;
             border-radius: 16px;
-            padding: 28px;
+            padding: 26px;
             color: var(--text-main);
-            border: 1px solid var(--border-color);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
         }
 
         .form-header {
@@ -345,6 +302,68 @@
             cursor: pointer;
             text-transform: uppercase;
             margin-top: 4px;
+        }
+
+        .section-padding {
+            padding: 60px 0;
+        }
+
+        .section-title-wrap {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-subtitle {
+            color: var(--primary-yellow);
+            font-size: 0.82rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 4px;
+            display: block;
+        }
+
+        .section-title {
+            font-size: 1.95rem;
+            font-weight: 800;
+            color: #1a1e24;
+        }
+
+        .grid-3 {
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .info-card {
+            background: #ffffff;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 24px 20px;
+            transition: var(--transition);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+        }
+
+        .info-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary-yellow);
+            box-shadow: var(--card-shadow);
+        }
+
+        .info-card h3 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: #1e293b;
+        }
+
+        .info-card p {
+            font-size: 0.84rem;
+            color: #64748b;
+            line-height: 1.55;
         }
 
         .footer {
@@ -430,7 +449,8 @@
 
         @media (max-width: 900px) {
 
-            .contact-grid,
+            .page-hero-container,
+            .grid-3,
             .footer-container {
                 grid-template-columns: 1fr !important;
             }
@@ -496,10 +516,22 @@
                 font-size: 0.72rem;
             }
 
-            .contact-grid,
+            .page-hero-container,
+            .grid-3,
             .footer-container {
                 grid-template-columns: 1fr !important;
                 gap: 20px;
+            }
+
+            .hero-form-card {
+                width: 100%;
+                max-width: 100%;
+            }
+        }
+
+        @media (max-width: 900px) {
+            .testimonials-grid {
+                grid-template-columns: 1fr !important;
             }
         }
 
@@ -507,6 +539,67 @@
             .header .btn-yellow {
                 display: none;
             }
+        }
+
+        /* Testimonials Section */
+        .testimonials-section {
+            background-color: #f8fafc;
+            padding: 60px 0;
+        }
+
+        .testimonials-grid {
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .testimonial-card {
+            background: #ffffff;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 26px 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .quote-icon {
+            font-size: 2.2rem;
+            color: var(--primary-yellow);
+            line-height: 1;
+            margin-bottom: 8px;
+            font-family: Georgia, serif;
+            font-weight: bold;
+        }
+
+        .testimonial-text {
+            font-size: 0.85rem;
+            color: #475569;
+            line-height: 1.6;
+            margin-bottom: 18px;
+            flex-grow: 1;
+        }
+
+        .rating {
+            color: var(--primary-yellow);
+            font-size: 0.82rem;
+            margin-bottom: 10px;
+            display: flex;
+            gap: 3px;
+        }
+
+        .client-info h4 {
+            font-size: 0.92rem;
+            font-weight: 700;
+            color: #1e293b;
+        }
+
+        .client-info span {
+            font-size: 0.72rem;
+            color: #94a3b8;
         }
     </style>
 </head>
@@ -516,58 +609,20 @@
     <!-- DYNAMIC HEADER PLACEHOLDER -->
     <div id="header-placeholder"></div>
 
-    <!-- PAGE HERO -->
+    <!-- PAGE HERO & FORM -->
     <section class="page-hero">
         <div class="page-hero-container">
-            <h1>CONTACT <span>KANASU CABS</span></h1>
-            <p>We are available 24/7 to assist you with taxi bookings, custom route fares, and trip inquiries.</p>
-        </div>
-    </section>
-
-    <!-- CONTACT CONTENT -->
-    <section class="section-padding">
-        <div class="contact-grid">
-            <div class="contact-info-card">
-                <h3>Contact Details</h3>
-
-                <div class="contact-item">
-                    <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
-                    <div class="contact-details">
-                        <h5>Phone / WhatsApp</h5>
-                        <p><a href="tel:9187710319">+91 9187710319</a></p>
-                    </div>
-                </div>
-
-                <div class="contact-item">
-                    <div class="contact-icon"><i class="fas fa-envelope"></i></div>
-                    <div class="contact-details">
-                        <h5>Email Address</h5>
-                        <p><a href="mailto:bhaskarcoorg01@gmail.com">bhaskarcoorg01@gmail.com</a></p>
-                    </div>
-                </div>
-
-                <div class="contact-item">
-                    <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
-                    <div class="contact-details">
-                        <h5>Business Location</h5>
-                        <p>Bangalore, Karnataka, India</p>
-                    </div>
-                </div>
-
-                <div class="contact-item">
-                    <div class="contact-icon"><i class="fas fa-clock"></i></div>
-                    <div class="contact-details">
-                        <h5>Working Hours</h5>
-                        <p>24 Hours a Day, 7 Days a Week</p>
-                    </div>
-                </div>
+            <div>
+                <h1>Book a Taxi Online <span>in Minutes</span></h1>
+                <p>Fast, reliable cab booking for local rides, airport transfers, and outstation trips — all in one
+                    place.</p>
+                <a href="#book" class="btn-yellow">Book Your Ride Now →</a>
             </div>
 
-            <!-- ENQUIRY FORM -->
             <div class="hero-form-card" id="book">
                 <div class="form-header">
-                    <h2>SEND US AN <span>ENQUIRY</span></h2>
-                    <p>Instant booking confirmation via WhatsApp</p>
+                    <h2>ONLINE <span>CAB BOOKING</span></h2>
+                    <p>Get instant confirmation via WhatsApp</p>
                 </div>
                 <form class="enquiry-form" id="enquiryForm" onsubmit="handleFormSubmit(event)">
                     <div class="input-group">
@@ -579,12 +634,22 @@
                         <input type="tel" id="userMobile" placeholder="Mobile Number" required>
                     </div>
                     <div class="input-group">
+                        <i class="fas fa-tasks"></i>
+                        <select id="serviceType" onchange="toggleFormFields()" required>
+                            <option value="" disabled selected>Select Service Type</option>
+                            <option value="Local Hourly Cab">Local Hourly Cab</option>
+                            <option value="Airport Transfer">Airport pickup / drop</option>
+                            <option value="Oneway Outstation">Oneway Outstation Drop</option>
+                            <option value="Roundtrip Outstation">Roundtrip Outstation Cab</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
                         <i class="fas fa-map-marker-alt"></i>
-                        <input type="text" id="pickupLocation" placeholder="Pickup Location (Bangalore)" required>
+                        <input type="text" id="pickupLocation" placeholder="Pickup Location" required>
                     </div>
                     <div class="input-group">
                         <i class="fas fa-location-arrow"></i>
-                        <input type="text" id="dropLocation" placeholder="Drop Location / Destination" required>
+                        <input type="text" id="dropLocation" placeholder="Destination / Drop Location" required>
                     </div>
                     <div class="input-group">
                         <i class="far fa-calendar-alt"></i>
@@ -598,16 +663,145 @@
                             <option value="Toyota Etios">Toyota Etios (4 Seats AC)</option>
                             <option value="Toyota Innova">Toyota Innova (7 Seats AC)</option>
                             <option value="Innova Crysta">Innova Crysta (7 Seats AC)</option>
-                            <option value="Tempo Traveller">Tempo Traveller (12-16 Seats AC)</option>
                         </select>
                     </div>
                     <div class="input-group">
                         <i class="far fa-envelope"></i>
-                        <textarea id="userMessage" placeholder="Message / Special Requirements"></textarea>
+                        <textarea id="userMessage"
+                            placeholder="Special requirements (e.g. return date, flight details)"></textarea>
                     </div>
-                    <button type="submit" class="btn-quote"><i class="fab fa-whatsapp"></i> SEND VIA WHATSAPP
-                        NOW</button>
+                    <button type="submit" class="btn-quote"><i class="fab fa-whatsapp"></i> BOOK TAXI VIA
+                        WHATSAPP</button>
                 </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- GENERAL DETAILS & WHY CHOOSE US -->
+    <section class="section-padding">
+        <div style="max-width: 1240px; margin: 0 auto; padding: 0 20px;">
+            <div
+                style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 40px; align-items: start; margin-bottom: 40px;">
+                <div>
+                    <span class="section-subtitle">ABOUT OUR SERVICE</span>
+                    <h2 class="section-title" style="margin-bottom: 20px; font-size: 1.8rem;">Simple Online Taxi Booking
+                    </h2>
+                    <p style="font-size: 1rem; color: #475569; line-height: 1.7; margin-bottom: 20px;">Kanasu Cabs makes
+                        booking a taxi simple. Choose your pickup point, destination, and vehicle type, and get instant
+                        confirmation with a verified driver on the way. Whether you need a quick local ride or a
+                        long-distance rental, our online booking system has you covered, 24x7.</p>
+                    <p
+                        style="font-size: 1rem; font-weight: 600; color: #1e293b; border-left: 3px solid var(--primary-yellow); padding-left: 12px; margin-top: 25px;">
+                        Bangalore's go-to cab booking service for every kind of trip.</p>
+                </div>
+
+                <div>
+                    <span class="section-subtitle">WHY CHOOSE US</span>
+                    <h2 class="section-title" style="margin-bottom: 20px; font-size: 1.8rem;">Why Choose Us</h2>
+                    <ul style="display: flex; flex-direction: column; gap: 15px; margin-top: 15px;">
+                        <li style="display: flex; align-items: center; gap: 12px; font-size: 0.95rem; color: #334155;">
+                            <i class="fas fa-check-circle" style="color: var(--primary-yellow); font-size: 1.2rem;"></i>
+                            Instant online booking and confirmation
+                        </li>
+                        <li style="display: flex; align-items: center; gap: 12px; font-size: 0.95rem; color: #334155;">
+                            <i class="fas fa-check-circle" style="color: var(--primary-yellow); font-size: 1.2rem;"></i>
+                            Local, airport, and outstation options in one place
+                        </li>
+                        <li style="display: flex; align-items: center; gap: 12px; font-size: 0.95rem; color: #334155;">
+                            <i class="fas fa-check-circle" style="color: var(--primary-yellow); font-size: 1.2rem;"></i>
+                            Transparent, upfront pricing
+                        </li>
+                        <li style="display: flex; align-items: center; gap: 12px; font-size: 0.95rem; color: #334155;">
+                            <i class="fas fa-check-circle" style="color: var(--primary-yellow); font-size: 1.2rem;"></i>
+                            Verified drivers and clean vehicles
+                        </li>
+                        <li style="display: flex; align-items: center; gap: 12px; font-size: 0.95rem; color: #334155;">
+                            <i class="fas fa-check-circle" style="color: var(--primary-yellow); font-size: 1.2rem;"></i>
+                            Round-the-clock customer support
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- CTA Section -->
+            <div
+                style="background: linear-gradient(135deg, #111418 0%, #1a1e24 100%); padding: 40px; border-radius: 16px; text-align: center; color: white; margin-top: 40px; box-shadow: var(--card-shadow);">
+                <h3 style="font-size: 1.5rem; font-weight: 800; margin-bottom: 12px; color: #ffffff;">Book Your Ride Now
+                    →</h3>
+                <p
+                    style="color: #cbd5e1; font-size: 0.95rem; margin-bottom: 25px; max-width: 600px; margin-left: auto; margin-right: auto;">
+                    Get instant confirmation. Choose your preferred booking method below:</p>
+                <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
+                    <a href="https://wa.me/919187710319?text=Hello%20Kanasu%20Cabs,%20I%20want%20to%20book%20a%20cab."
+                        target="_blank" class="btn-yellow"
+                        style="background-color: #25d366; color: white; padding: 12px 28px; border-radius: 50px;"><i
+                            class="fab fa-whatsapp"></i> WhatsApp</a>
+                    <a href="tel:9187710319" class="btn-yellow"
+                        style="background-color: #ffffff; color: #000000; padding: 12px 28px; border-radius: 50px;"><i
+                            class="fas fa-phone-alt"></i> Call</a>
+                    <a href="#book" class="btn-yellow" style="padding: 12px 28px; border-radius: 50px;">Booking Form</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials-section">
+        <div class="section-title-wrap">
+            <span class="section-subtitle">TESTIMONIALS</span>
+            <h2 class="section-title">What Our Customers Say</h2>
+        </div>
+
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="quote-icon">“</div>
+                <p class="testimonial-text">We booked an airport transfer from Whitefield to BLR Airport at 3 AM. The
+                    cab arrived 10 minutes early. Professional drivers and transparent pricing!</p>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <div class="client-info">
+                    <h4>Priya S.</h4>
+                    <span>Bangalore</span>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="quote-icon">“</div>
+                <p class="testimonial-text">Very reliable taxi service for Mysore and Coorg trips. Reasonable per-km
+                    rates with zero hidden charges. Highly recommended Kanasu Cabs!</p>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <div class="client-info">
+                    <h4>Arjun M.</h4>
+                    <span>Bangalore</span>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="quote-icon">“</div>
+                <p class="testimonial-text">Excellent local cab service! Hired their 8hr package for shopping in
+                    Commercial Street and Chickpet. Spotless Sedan, prompt pickup.</p>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <div class="client-info">
+                    <h4>Karthik P.</h4>
+                    <span>Bangalore</span>
+                </div>
             </div>
         </div>
     </section>
@@ -622,10 +816,23 @@
         const navMenu = document.getElementById('navMenu');
         mobileToggle.addEventListener('click', () => { navMenu.classList.toggle('active'); });
 
+        function toggleFormFields() {
+            const svc = document.getElementById('serviceType').value;
+            const dropField = document.getElementById('dropLocation');
+            if (svc === "Local Hourly Cab") {
+                dropField.placeholder = "Hourly Package (e.g. 8 Hrs / 80 KM)";
+            } else if (svc === "Airport Transfer") {
+                dropField.placeholder = "Drop (Airport or Bangalore City)";
+            } else {
+                dropField.placeholder = "Destination City / Route";
+            }
+        }
+
         function handleFormSubmit(event) {
             event.preventDefault();
             const name = document.getElementById('userName').value.trim();
             const mobile = document.getElementById('userMobile').value.trim();
+            const svc = document.getElementById('serviceType').value;
             const pickup = document.getElementById('pickupLocation').value.trim();
             const drop = document.getElementById('dropLocation').value.trim();
             const rawDate = document.getElementById('travelDate').value;
@@ -639,14 +846,15 @@
                 if (p.length === 3) formattedDate = `${p[2]}-${p[1]}-${p[0]}`;
             }
 
-            let text = `*New Contact Enquiry - Kanasu Cabs*%0A` +
+            let text = `*New Taxi Booking - Kanasu Cabs*%0A` +
                 `*Name:* ${encodeURIComponent(name)}%0A` +
                 `*Mobile:* ${encodeURIComponent(mobile)}%0A` +
+                `*Service Type:* ${encodeURIComponent(svc)}%0A` +
                 `*Pickup:* ${encodeURIComponent(pickup)}%0A` +
-                `*Drop:* ${encodeURIComponent(drop)}%0A` +
+                `*Drop / destination:* ${encodeURIComponent(drop)}%0A` +
                 `*Date:* ${encodeURIComponent(formattedDate)}%0A` +
                 `*Car Selected:* ${encodeURIComponent(carText)}%0A`;
-            if (message) text += `*Message:* ${encodeURIComponent(message)}%0A`;
+            if (message) text += `*Notes:* ${encodeURIComponent(message)}%0A`;
 
             window.open(`https://wa.me/919187710319?text=${text}`, '_blank');
         }

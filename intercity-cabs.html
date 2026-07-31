@@ -12,105 +12,73 @@
 </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Kanasu Cabs - Best Oneway Taxi Service in Bangalore. Pay only one-way drop fare for trips to Mysore, Coorg, Ooty, Chennai, Hyderabad, and 50+ outstation routes.">
-    <meta name="keywords" content="Oneway Taxi Bangalore, Bangalore Oneway Cab, One Way Drop Taxi Bangalore, Kanasu Cabs Oneway, Outstation Oneway Taxi Bangalore">
+    <meta name="description" content="Kanasu Cabs - Intercity Cab Service from Bangalore. Comfortable, safe intercity travel with fixed fares and experienced highway drivers.">
+    <meta name="keywords" content="Intercity Cabs Bangalore, Intercity Taxi Bangalore, Bangalore to Chennai Cab, Bangalore to Mysore Cab, Kanasu Cabs Intercity">
     <meta name="author" content="Kanasu Cabs">
-    <title>Oneway Taxi Service in Bangalore - Kanasu Cabs | Pay 1-Way Fare Only</title>
+    <title>Intercity Cab Service Bangalore - Kanasu Cabs | Reliable Intercity Travel</title>
 
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
     <style>
-        :root {
-            --primary-yellow: #FFB800;
-            --primary-yellow-hover: #e5a600;
-            --dark-bg: #111418;
-            --dark-secondary: #1a1e24;
-            --dark-card: #22272e;
-            --text-main: #212529;
-            --text-muted: #6c757d;
-            --light-bg: #f8f9fa;
-            --border-color: #e2e8f0;
-            --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-            --transition: all 0.3s ease;
-        }
-
+        :root { --primary-yellow: #FFB800; --primary-yellow-hover: #e5a600; --dark-bg: #111418; --text-main: #212529; --text-muted: #6c757d; --border-color: #e2e8f0; --card-shadow: 0 10px 30px rgba(0,0,0,0.08); --transition: all 0.3s ease; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
-        body { font-family: 'Poppins', sans-serif; color: var(--text-main); background-color: #ffffff; line-height: 1.6; overflow-x: hidden; }
+        body { font-family: 'Poppins', sans-serif; color: var(--text-main); background-color: #ffffff; line-height: 1.6; }
         a { text-decoration: none; color: inherit; }
         ul { list-style: none; }
         img { max-width: 100%; height: auto; display: block; }
 
         .top-bar { background-color: #0b0d0f; color: #b0b7c0; font-size: 0.85rem; padding: 8px 0; border-bottom: 1px solid rgba(255, 255, 255, 0.08); }
-        .top-bar-container { max-width: 1240px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; }
-        .top-bar-left { display: flex; align-items: center; gap: 8px; }
-        .top-bar-left i { color: var(--primary-yellow); }
-        .top-bar-right { display: flex; align-items: center; gap: 24px; }
-        .top-bar-item { display: flex; align-items: center; gap: 8px; transition: var(--transition); }
-        .top-bar-item:hover { color: #ffffff; }
-        .top-bar-item i { color: var(--primary-yellow); }
+        .top-bar-container { max-width: 1440px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; }
+        .top-bar-left i, .top-bar-item i { color: var(--primary-yellow); }
+        .top-bar-right { display: flex; gap: 24px; }
 
-        .header { background-color: #ffffff; position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06); }
+        .header { background-color: #ffffff; position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
         .header-container { max-width: 1440px; margin: 0 auto; padding: 12px 24px; display: flex; justify-content: space-between; align-items: center; }
         .logo { display: flex; align-items: center; gap: 12px; }
-        .logo-icon { width: 48px; height: 48px; background: radial-gradient(circle at center, #1b4332 0%, #081c15 100%); border: 2px solid #2d6a4f; border-radius: 50%; display: flex; justify-content: center; align-items: center; box-shadow: 0 4px 10px rgba(0,0,0,0.15); }
+        .logo-icon { width: 48px; height: 48px; background: radial-gradient(circle at center, #1b4332 0%, #081c15 100%); border: 2px solid #2d6a4f; border-radius: 50%; display: flex; justify-content: center; align-items: center; }
         .logo-icon i { color: var(--primary-yellow); font-size: 1.4rem; }
-        .logo-title { font-size: 1.45rem; font-weight: 800; line-height: 1; color: #1b4332; }
+        .logo-title { font-size: 1.45rem; font-weight: 800; color: #1b4332; }
         .logo-title span { color: var(--primary-yellow); }
-        .logo-subtitle { font-size: 0.65rem; font-weight: 600; letter-spacing: 1px; color: #555; text-transform: uppercase; margin-top: 2px; }
+        .logo-subtitle { font-size: 0.65rem; font-weight: 600; color: #555; text-transform: uppercase; }
 
-        .nav-menu { display: flex; align-items: center; gap: 18px; }
-        .nav-link { font-size: 0.88rem; font-weight: 600; color: #2c3e50; position: relative; padding: 6px 0; transition: var(--transition); white-space: nowrap; }
+        .nav-menu { display: flex; align-items: center; gap: 22px; }
+        .nav-link { font-size: 0.88rem; font-weight: 600; color: #2c3e50; padding: 6px 0; transition: var(--transition); white-space: nowrap; }
         .nav-link:hover, .nav-link.active { color: var(--primary-yellow); }
-        .nav-link.active::after { content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 3px; background-color: var(--primary-yellow); border-radius: 2px; }
+        .btn-yellow { background-color: var(--primary-yellow); color: #000000; font-weight: 700; font-size: 0.85rem; padding: 10px 22px; border-radius: 50px; border: none; cursor: pointer; text-transform: uppercase; white-space: nowrap; }
+        .btn-yellow:hover { background-color: var(--primary-yellow-hover); }
+        .mobile-toggle { display: none; font-size: 1.5rem; color: #2c3e50; }
 
-        .btn-yellow { background-color: var(--primary-yellow); color: #000000; font-weight: 700; font-size: 0.85rem; letter-spacing: 0.5px; padding: 10px 22px; border-radius: 50px; border: none; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; gap: 8px; box-shadow: 0 4px 15px rgba(255, 184, 0, 0.35); transition: var(--transition); text-transform: uppercase; white-space: nowrap; }
-        .btn-yellow:hover { background-color: var(--primary-yellow-hover); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(255, 184, 0, 0.45); }
-        .mobile-toggle { display: none; font-size: 1.5rem; color: #2c3e50; cursor: pointer; }
-
-        /* HERO & PAGE HEADER */
         .page-hero { background: linear-gradient(135deg, rgba(12, 16, 22, 0.94) 0%, rgba(20, 26, 35, 0.90) 100%), url('images/hero_car.png'); background-size: cover; background-position: center; color: #ffffff; padding: 55px 0; }
         .page-hero-container { max-width: 1240px; margin: 0 auto; padding: 0 20px; display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 40px; align-items: center; }
         .page-hero h1 { font-size: 2.3rem; font-weight: 800; text-transform: uppercase; line-height: 1.25; margin-bottom: 14px; }
         .page-hero h1 span { color: var(--primary-yellow); }
         .page-hero p { font-size: 1.05rem; color: #d0d7de; margin-bottom: 25px; }
 
-        /* FORM CARD */
         .hero-form-card { background: #ffffff; border-radius: 16px; padding: 26px; color: var(--text-main); box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35); }
         .form-header { text-align: center; margin-bottom: 16px; }
         .form-header h2 { font-size: 1.35rem; font-weight: 800; color: #1a1e24; text-transform: uppercase; }
         .form-header h2 span { color: var(--primary-yellow); }
-        .form-header p { font-size: 0.8rem; color: var(--text-muted); margin-top: 2px; }
         .enquiry-form { display: flex; flex-direction: column; gap: 10px; }
         .input-group { position: relative; display: flex; align-items: center; }
-        .input-group i { position: absolute; left: 12px; color: #94a3b8; font-size: 0.85rem; pointer-events: none; }
-        .input-group input, .input-group select, .input-group textarea { width: 100%; padding: 9px 12px 9px 36px; font-family: inherit; font-size: 0.82rem; border: 1px solid var(--border-color); border-radius: 8px; background-color: #f8fafc; color: #1e293b; outline: none; transition: var(--transition); }
+        .input-group i { position: absolute; left: 12px; color: #94a3b8; font-size: 0.85rem; }
+        .input-group input, .input-group select, .input-group textarea { width: 100%; padding: 9px 12px 9px 36px; font-family: inherit; font-size: 0.82rem; border: 1px solid var(--border-color); border-radius: 8px; background-color: #f8fafc; outline: none; }
         .input-group textarea { padding-top: 8px; height: 60px; resize: none; }
-        .btn-quote { width: 100%; background-color: var(--primary-yellow); color: #000000; font-weight: 700; font-size: 0.88rem; padding: 11px; border-radius: 8px; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; text-transform: uppercase; box-shadow: 0 4px 15px rgba(255, 184, 0, 0.35); transition: var(--transition); margin-top: 4px; }
-        .btn-quote:hover { background-color: var(--primary-yellow-hover); }
+        .btn-quote { width: 100%; background-color: var(--primary-yellow); color: #000000; font-weight: 700; font-size: 0.88rem; padding: 11px; border-radius: 8px; border: none; cursor: pointer; text-transform: uppercase; margin-top: 4px; }
 
         .section-padding { padding: 60px 0; }
         .section-title-wrap { text-align: center; margin-bottom: 40px; }
         .section-subtitle { color: var(--primary-yellow); font-size: 0.82rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 4px; display: block; }
-        .section-title { font-size: 1.95rem; font-weight: 800; color: #1a1e24; position: relative; display: inline-block; padding-bottom: 12px; }
-        .section-title::after { content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 50px; height: 3px; background-color: var(--primary-yellow); border-radius: 2px; }
+        .section-title { font-size: 1.95rem; font-weight: 800; color: #1a1e24; }
 
-        /* ROUTES GRID */
-        .routes-grid { max-width: 1240px; margin: 0 auto; padding: 0 20px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-        .route-card { background: #ffffff; border: 1px solid var(--border-color); border-radius: 12px; padding: 24px 20px; transition: var(--transition); box-shadow: 0 4px 15px rgba(0,0,0,0.03); }
-        .route-card:hover { transform: translateY(-5px); box-shadow: var(--card-shadow); border-color: var(--primary-yellow); }
-        .route-card h3 { font-size: 1.15rem; font-weight: 700; color: #1e293b; margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
-        .route-card h3 i { color: var(--primary-yellow); }
-        .route-card p { font-size: 0.84rem; color: #64748b; line-height: 1.5; margin-bottom: 14px; }
-        .route-price { font-size: 1.2rem; font-weight: 800; color: #1e293b; }
-        .route-price span { font-size: 0.7rem; color: var(--primary-yellow); display: block; font-weight: 700; text-transform: uppercase; }
+        .grid-3 { max-width: 1240px; margin: 0 auto; padding: 0 20px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+        .info-card { background: #ffffff; border: 1px solid var(--border-color); border-radius: 12px; padding: 24px 20px; transition: var(--transition); box-shadow: 0 4px 15px rgba(0,0,0,0.03); }
+        .info-card:hover { transform: translateY(-5px); border-color: var(--primary-yellow); box-shadow: var(--card-shadow); }
+        .info-card h3 { font-size: 1.15rem; font-weight: 700; margin-bottom: 8px; color: #1e293b; }
+        .info-card p { font-size: 0.84rem; color: #64748b; line-height: 1.55; }
 
-        /* FOOTER & STICKY ACTIONS */
         .footer { background-color: #0b0d0f; color: #94a3b8; font-size: 0.85rem; padding-top: 55px; }
         .footer-container { max-width: 1240px; margin: 0 auto; padding: 0 20px 35px; display: grid; grid-template-columns: 1.3fr 0.9fr 1fr 1fr 1.1fr; gap: 28px; }
         .footer-col h3 { color: #ffffff; font-size: 0.98rem; font-weight: 700; margin-bottom: 18px; }
@@ -125,7 +93,7 @@
         .sticky-btn.call { background-color: var(--primary-yellow); color: #000000; }
 
         @media (max-width: 900px) {
-            .page-hero-container, .routes-grid, .footer-container { grid-template-columns: 1fr !important; }
+            .page-hero-container, .grid-3, .footer-container { grid-template-columns: 1fr !important; }
             .mobile-toggle { display: block; }
             .nav-menu { position: absolute; top: 100%; left: 0; width: 100%; background-color: #ffffff; flex-direction: column; padding: 20px; gap: 15px; display: none; box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
             .nav-menu.active { display: flex; }
@@ -139,8 +107,8 @@
             .logo-title { font-size: 1.1rem; }
             .logo-subtitle { font-size: 0.52rem; }
             .header .btn-yellow { padding: 6px 10px; font-size: 0.72rem; }
-            .page-hero-container, .routes-grid, .footer-container { grid-template-columns: 1fr !important; gap: 20px; }
-            .hero-form-card, .route-card { width: 100%; max-width: 100%; }
+            .page-hero-container, .grid-3, .footer-container { grid-template-columns: 1fr !important; gap: 20px; }
+            .hero-form-card { width: 100%; max-width: 100%; }
         }
         @media (max-width: 900px) {
             .testimonials-grid { grid-template-columns: 1fr !important; }
@@ -165,19 +133,19 @@
     <!-- DYNAMIC HEADER PLACEHOLDER -->
     <div id="header-placeholder"></div>
 
-    <!-- PAGE HERO & BOOKING FORM -->
+    <!-- PAGE HERO & FORM -->
     <section class="page-hero">
         <div class="page-hero-container">
             <div>
-                <h1>One Way Cab Booking <span>— Pay Only for the Distance You Travel</span></h1>
-                <p>Skip the round-trip charges. Book a one-way drop taxi to Chennai, Mysore, Coorg, Ooty and more, with upfront, transparent pricing.</p>
-                <a href="#book" class="btn-yellow">Get Your One-Way Fare Instantly →</a>
+                <h1>Intercity Cab Service <span>— Travel Between Cities With Ease</span></h1>
+                <p>Comfortable, safe intercity travel with fixed fares and experienced drivers who know the routes well.</p>
+                <a href="#book" class="btn-yellow">Book Your Intercity Cab →</a>
             </div>
 
             <div class="hero-form-card" id="book">
                 <div class="form-header">
-                    <h2>BOOK <span>ONEWAY TAXI</span></h2>
-                    <p>Instant WhatsApp confirmation & best rates</p>
+                    <h2>BOOK <span>INTERCITY CAB</span></h2>
+                    <p>Get instant confirmation via WhatsApp</p>
                 </div>
                 <form class="enquiry-form" id="enquiryForm" onsubmit="handleFormSubmit(event)">
                     <div class="input-group">
@@ -194,7 +162,7 @@
                     </div>
                     <div class="input-group">
                         <i class="fas fa-location-arrow"></i>
-                        <input type="text" id="dropLocation" placeholder="Destination City (e.g. Mysore, Ooty)" required>
+                        <input type="text" id="dropLocation" placeholder="Destination City (e.g. Chennai, Mysore)" required>
                     </div>
                     <div class="input-group">
                         <i class="far fa-calendar-alt"></i>
@@ -208,74 +176,27 @@
                             <option value="Toyota Etios">Toyota Etios (4 Seats AC)</option>
                             <option value="Toyota Innova">Toyota Innova (7 Seats AC)</option>
                             <option value="Innova Crysta">Innova Crysta (7 Seats AC)</option>
-                            <option value="Innova Hycross">Innova Hycross (7 Seats AC)</option>
-                            <option value="Tempo Traveller">Tempo Traveller (12-16 Seats AC)</option>
                         </select>
                     </div>
                     <div class="input-group">
                         <i class="far fa-envelope"></i>
-                        <textarea id="userMessage" placeholder="Special Instructions / Route Details (Optional)"></textarea>
+                        <textarea id="userMessage" placeholder="Special requirements (e.g. return date, stops)"></textarea>
                     </div>
-                    <button type="submit" class="btn-quote">
-                        <i class="fab fa-whatsapp"></i> BOOK ONEWAY TAXI VIA WHATSAPP
-                    </button>
+                    <button type="submit" class="btn-quote"><i class="fab fa-whatsapp"></i> BOOK VIA WHATSAPP</button>
                 </form>
             </div>
         </div>
     </section>
 
-    <!-- POPULAR ONEWAY ROUTES -->
-    <section class="section-padding" style="background-color: #ffffff;">
-        <div class="section-title-wrap">
-            <span class="section-subtitle">POPULAR ROUTES</span>
-            <h2 class="section-title">Popular Oneway Taxi Routes from Bangalore</h2>
-        </div>
-
-        <div class="routes-grid">
-            <div class="route-card">
-                <h3><i class="fas fa-car-side"></i> Bangalore to Mysore</h3>
-                <p>Distance: 140 KM | Duration: ~3.5 Hours. Doorstep pickup in Bangalore & drop anywhere in Mysore city.</p>
-                <div class="route-price">₹2,499 <span>ONEWAY DROP FARE</span></div>
-            </div>
-            <div class="route-card">
-                <h3><i class="fas fa-car-side"></i> Bangalore to Coorg</h3>
-                <p>Distance: 240 KM | Duration: ~5.5 Hours. Comfortable drop taxi to Madikeri, Kushalnagar or Virajpet.</p>
-                <div class="route-price">₹3,999 <span>ONEWAY DROP FARE</span></div>
-            </div>
-            <div class="route-card">
-                <h3><i class="fas fa-car-side"></i> Bangalore to Ooty</h3>
-                <p>Distance: 270 KM | Duration: ~6 Hours. One-way drop cab to Ooty hill station, Coonoor or Kotagiri.</p>
-                <div class="route-price">₹4,499 <span>ONEWAY DROP FARE</span></div>
-            </div>
-            <div class="route-card">
-                <h3><i class="fas fa-car-side"></i> Bangalore to Chikmagalur</h3>
-                <p>Distance: 240 KM | Duration: ~4.5 Hours. Direct drop to coffee plantations & homestays in Chikmagalur.</p>
-                <div class="route-price">₹3,899 <span>ONEWAY DROP FARE</span></div>
-            </div>
-            <div class="route-card">
-                <h3><i class="fas fa-car-side"></i> Bangalore to Wayanad</h3>
-                <p>Distance: 280 KM | Duration: ~6.5 Hours. Safe oneway drop taxi across Kerala border to Kalpetta or Sultan Bathery.</p>
-                <div class="route-price">₹4,799 <span>ONEWAY DROP FARE</span></div>
-            </div>
-            <div class="route-card">
-                <h3><i class="fas fa-car-side"></i> Bangalore to Chennai</h3>
-                <p>Distance: 350 KM | Duration: ~6.5 Hours. Fast inter-state highway oneway drop taxi to Chennai city.</p>
-                <div class="route-price">₹5,499 <span>ONEWAY DROP FARE</span></div>
-            </div>
-        </div>
-    </section>
-
-    </section>
-
-    <!-- ONEWAY FEATURES & DETAILS -->
-    <section class="section-padding" style="background-color: #f8fafc; border-top: 1px solid var(--border-color);">
+    <!-- DETAILS & FEATURES -->
+    <section class="section-padding">
         <div style="max-width: 1240px; margin: 0 auto; padding: 0 20px;">
             <div style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 40px; align-items: start; margin-bottom: 40px;">
                 <div>
                     <span class="section-subtitle">ABOUT OUR SERVICE</span>
-                    <h2 class="section-title" style="margin-bottom: 20px; font-size: 1.8rem;">Genuine One-Way Drop Taxi</h2>
-                    <p style="font-size: 1rem; color: #475569; line-height: 1.7; margin-bottom: 20px;">Why pay for a return trip you're not taking? Kanasu Cabs offers genuine one-way drop taxi service, so your fare reflects only the distance covered. Popular routes include Bangalore to Chennai, Mysore, Coorg, and Ooty, with instant fare quotes and quick confirmation.</p>
-                    <p style="font-size: 1rem; font-weight: 600; color: #1e293b; border-left: 3px solid var(--primary-yellow); padding-left: 12px; margin-top: 25px;">Thousands of travelers choose one-way cabs with us to save on every trip.</p>
+                    <h2 class="section-title" style="margin-bottom: 20px; font-size: 1.8rem;">Stress-free Intercity Rides</h2>
+                    <p style="font-size: 1rem; color: #475569; line-height: 1.7; margin-bottom: 20px;">Traveling between cities for work or leisure? Kanasu Cabs' intercity cab service takes the stress out of long drives. Our drivers are experienced on major intercity routes, and every trip comes with a fixed fare agreed upfront, so there are no surprises along the way.</p>
+                    <p style="font-size: 1rem; font-weight: 600; color: #1e293b; border-left: 3px solid var(--primary-yellow); padding-left: 12px; margin-top: 25px;">Reliable intercity travel, trip after trip.</p>
                 </div>
                 
                 <div>
@@ -284,23 +205,23 @@
                     <ul style="display: flex; flex-direction: column; gap: 15px; margin-top: 15px;">
                         <li style="display: flex; align-items: center; gap: 12px; font-size: 0.95rem; color: #334155;">
                             <i class="fas fa-check-circle" style="color: var(--primary-yellow); font-size: 1.2rem;"></i>
-                            True one-way pricing — no hidden return fare
+                            Fixed fares on all intercity routes
                         </li>
                         <li style="display: flex; align-items: center; gap: 12px; font-size: 0.95rem; color: #334155;">
                             <i class="fas fa-check-circle" style="color: var(--primary-yellow); font-size: 1.2rem;"></i>
-                            Popular routes: Chennai, Mysore, Coorg, Ooty
+                            Experienced, route-familiar drivers
                         </li>
                         <li style="display: flex; align-items: center; gap: 12px; font-size: 0.95rem; color: #334155;">
                             <i class="fas fa-check-circle" style="color: var(--primary-yellow); font-size: 1.2rem;"></i>
-                            Instant online fare quote
+                            Sedans, SUVs, and Innovas available
                         </li>
                         <li style="display: flex; align-items: center; gap: 12px; font-size: 0.95rem; color: #334155;">
                             <i class="fas fa-check-circle" style="color: var(--primary-yellow); font-size: 1.2rem;"></i>
-                            Clean cars, verified drivers
+                            24x7 booking and support
                         </li>
                         <li style="display: flex; align-items: center; gap: 12px; font-size: 0.95rem; color: #334155;">
                             <i class="fas fa-check-circle" style="color: var(--primary-yellow); font-size: 1.2rem;"></i>
-                            Easy online or WhatsApp booking
+                            Safe, comfortable long-distance travel
                         </li>
                     </ul>
                 </div>
@@ -308,10 +229,10 @@
             
             <!-- CTA Section -->
             <div style="background: linear-gradient(135deg, #111418 0%, #1a1e24 100%); padding: 40px; border-radius: 16px; text-align: center; color: white; margin-top: 40px; box-shadow: var(--card-shadow);">
-                <h3 style="font-size: 1.5rem; font-weight: 800; margin-bottom: 12px; color: #ffffff;">Get Your One-Way Fare Instantly →</h3>
+                <h3 style="font-size: 1.5rem; font-weight: 800; margin-bottom: 12px; color: #ffffff;">Book Your Intercity Cab →</h3>
                 <p style="color: #cbd5e1; font-size: 0.95rem; margin-bottom: 25px; max-width: 600px; margin-left: auto; margin-right: auto;">Get instant confirmation. Choose your preferred booking method below:</p>
                 <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
-                    <a href="https://wa.me/919187710319?text=Hello%20Kanasu%20Cabs,%20I%20want%20to%20book%20a%20oneway%20taxi." target="_blank" class="btn-yellow" style="background-color: #25d366; color: white; padding: 12px 28px; border-radius: 50px;"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                    <a href="https://wa.me/919187710319?text=Hello%20Kanasu%20Cabs,%20I%20want%20to%20book%20an%20intercity%20cab." target="_blank" class="btn-yellow" style="background-color: #25d366; color: white; padding: 12px 28px; border-radius: 50px;"><i class="fab fa-whatsapp"></i> WhatsApp</a>
                     <a href="tel:9187710319" class="btn-yellow" style="background-color: #ffffff; color: #000000; padding: 12px 28px; border-radius: 50px;"><i class="fas fa-phone-alt"></i> Call</a>
                     <a href="#book" class="btn-yellow" style="padding: 12px 28px; border-radius: 50px;">Booking Form</a>
                 </div>
@@ -329,7 +250,7 @@
         <div class="testimonials-grid">
             <div class="testimonial-card">
                 <div class="quote-icon">“</div>
-                <p class="testimonial-text">Excellent oneway taxi service from Bangalore to Mysore! The driver was polite, punctual, and the Innova Crysta was spotless. Saved money by paying only one-way drop fare.</p>
+                <p class="testimonial-text">Excellent service! We booked a cab from Bangalore to Chennai. The driver was very familiar with the highway, took the best routes, and drove safely. Fixed fare, no surprises.</p>
                 <div class="rating">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -338,14 +259,14 @@
                     <i class="fas fa-star"></i>
                 </div>
                 <div class="client-info">
-                    <h4>Ramesh R.</h4>
+                    <h4>Vivek S.</h4>
                     <span>Bangalore</span>
                 </div>
             </div>
 
             <div class="testimonial-card">
                 <div class="quote-icon">“</div>
-                <p class="testimonial-text">I was looking for a drop to Ooty from Bangalore and Kanasu Cabs offered the best rate. Professional service and no hidden return charges. Highly recommended!</p>
+                <p class="testimonial-text">We used Kanasu Cabs for our business trip to Mysore. The vehicle was clean and comfortable, and the driver was prompt. Best intercity service in Bangalore.</p>
                 <div class="rating">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -354,14 +275,14 @@
                     <i class="fas fa-star"></i>
                 </div>
                 <div class="client-info">
-                    <h4>Suresh V.</h4>
-                    <span>Ooty Traveler</span>
+                    <h4>Meera K.</h4>
+                    <span>Bangalore</span>
                 </div>
             </div>
 
             <div class="testimonial-card">
                 <div class="quote-icon">“</div>
-                <p class="testimonial-text">Very comfortable drop taxi to Chennai. The booking process on WhatsApp was quick. The vehicle was in excellent condition, and the driver was friendly.</p>
+                <p class="testimonial-text">Zero hidden fees. The amount quoted on WhatsApp was exactly what I paid at the end. Recommended for stress-free intercity highway travel.</p>
                 <div class="rating">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -370,8 +291,8 @@
                     <i class="fas fa-star"></i>
                 </div>
                 <div class="client-info">
-                    <h4>Meenakshi S.</h4>
-                    <span>Chennai Resident</span>
+                    <h4>Raghavan N.</h4>
+                    <span>Bangalore</span>
                 </div>
             </div>
         </div>
@@ -404,12 +325,12 @@
                 if (p.length === 3) formattedDate = `${p[2]}-${p[1]}-${p[0]}`;
             }
 
-            let text = `*New Oneway Taxi Booking - Kanasu Cabs*%0A` +
+            let text = `*New Intercity Cab Booking - Kanasu Cabs*%0A` +
                 `*Name:* ${encodeURIComponent(name)}%0A` +
                 `*Mobile:* ${encodeURIComponent(mobile)}%0A` +
-                `*Service:* Oneway Taxi%0A` +
+                `*Service:* Intercity Cab%0A` +
                 `*Pickup:* ${encodeURIComponent(pickup)}%0A` +
-                `*Drop Destination:* ${encodeURIComponent(drop)}%0A` +
+                `*Destination:* ${encodeURIComponent(drop)}%0A` +
                 `*Date:* ${encodeURIComponent(formattedDate)}%0A` +
                 `*Car Selected:* ${encodeURIComponent(carText)}%0A`;
             if (message) text += `*Notes:* ${encodeURIComponent(message)}%0A`;

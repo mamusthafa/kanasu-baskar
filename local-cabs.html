@@ -112,9 +112,22 @@
             .page-hero-container, .grid-3, .footer-container { grid-template-columns: 1fr !important; gap: 20px; }
             .hero-form-card { width: 100%; max-width: 100%; }
         }
+        @media (max-width: 900px) {
+            .testimonials-grid { grid-template-columns: 1fr !important; }
+        }
         @media (max-width: 480px) {
             .header .btn-yellow { display: none; }
         }
+
+        /* Testimonials Section */
+        .testimonials-section { background-color: #f8fafc; padding: 60px 0; }
+        .testimonials-grid { max-width: 1240px; margin: 0 auto; padding: 0 20px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+        .testimonial-card { background: #ffffff; border: 1px solid var(--border-color); border-radius: 12px; padding: 26px 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); display: flex; flex-direction: column; }
+        .quote-icon { font-size: 2.2rem; color: var(--primary-yellow); line-height: 1; margin-bottom: 8px; font-family: Georgia, serif; font-weight: bold; }
+        .testimonial-text { font-size: 0.85rem; color: #475569; line-height: 1.6; margin-bottom: 18px; flex-grow: 1; }
+        .rating { color: var(--primary-yellow); font-size: 0.82rem; margin-bottom: 10px; display: flex; gap: 3px; }
+        .client-info h4 { font-size: 0.92rem; font-weight: 700; color: #1e293b; }
+        .client-info span { font-size: 0.72rem; color: #94a3b8; }
     </style>
 </head>
 <body>
@@ -126,9 +139,9 @@
     <section class="page-hero">
         <div class="page-hero-container">
             <div>
-                <h1>LOCAL HOURLY <span>CAB RENTALS IN BANGALORE</span></h1>
-                <p>Hire a dedicated AC cab with chauffeur for 4 Hrs, 8 Hrs, or 12 Hrs. Ideal for city shopping, business meetings, and local hospital visits.</p>
-                <a href="tel:9187710319" class="btn-yellow"><i class="fas fa-phone-alt"></i> CALL +91 9187710319</a>
+                <h1>Bangalore's Trusted Local Taxi Service <span>— Reliable City Cabs</span></h1>
+                <p>Reliable city cabs for daily commutes, events, shopping trips, and everything in between — sedans, SUVs, and Innovas available.</p>
+                <a href="#book" class="btn-yellow">Book a Local Cab Today →</a>
             </div>
 
             <div class="hero-form-card" id="book">
@@ -204,6 +217,118 @@
                 <h3><i class="fas fa-moon" style="color:var(--primary-yellow);"></i> 12 Hours / 120 KM</h3>
                 <p>Extended full-day rental for exploring all corners of Bangalore city without worrying about meter charges.</p>
                 <div class="info-price">₹2,699 <span>STARTING TARIFF</span></div>
+            </div>
+        </div>
+    </section>
+
+    </section>
+
+    <!-- LOCAL FEATURES & DETAILS -->
+    <section class="section-padding" style="background-color: #f8fafc; border-top: 1px solid var(--border-color);">
+        <div style="max-width: 1240px; margin: 0 auto; padding: 0 20px;">
+            <div style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 40px; align-items: start; margin-bottom: 40px;">
+                <div>
+                    <span class="section-subtitle">ABOUT OUR SERVICE</span>
+                    <h2 class="section-title" style="margin-bottom: 20px; font-size: 1.8rem;">Bangalore City Taxi</h2>
+                    <p style="font-size: 1rem; color: #475569; line-height: 1.7; margin-bottom: 20px;">Need a dependable cab within Bangalore city? Kanasu Cabs offers local taxi service with prompt pickups, courteous drivers, and fair, meter-transparent fares. From daily office commutes to special occasions, we're built for reliability across every corner of the city.</p>
+                    <p style="font-size: 1rem; font-weight: 600; color: #1e293b; border-left: 3px solid var(--primary-yellow); padding-left: 12px; margin-top: 25px;">A local taxi service Bangalore residents rely on every day.</p>
+                </div>
+                
+                <div>
+                    <span class="section-subtitle">WHY CHOOSE US</span>
+                    <h2 class="section-title" style="margin-bottom: 20px; font-size: 1.8rem;">Why Choose Us</h2>
+                    <ul style="display: flex; flex-direction: column; gap: 15px; margin-top: 15px;">
+                        <li style="display: flex; align-items: center; gap: 12px; font-size: 0.95rem; color: #334155;">
+                            <i class="fas fa-check-circle" style="color: var(--primary-yellow); font-size: 1.2rem;"></i>
+                            Prompt local pickups anywhere in Bangalore
+                        </li>
+                        <li style="display: flex; align-items: center; gap: 12px; font-size: 0.95rem; color: #334155;">
+                            <i class="fas fa-check-circle" style="color: var(--primary-yellow); font-size: 1.2rem;"></i>
+                            Fair, transparent fares
+                        </li>
+                        <li style="display: flex; align-items: center; gap: 12px; font-size: 0.95rem; color: #334155;">
+                            <i class="fas fa-check-circle" style="color: var(--primary-yellow); font-size: 1.2rem;"></i>
+                            Sedan, SUV, and Innova options
+                        </li>
+                        <li style="display: flex; align-items: center; gap: 12px; font-size: 0.95rem; color: #334155;">
+                            <i class="fas fa-check-circle" style="color: var(--primary-yellow); font-size: 1.2rem;"></i>
+                            Verified, well-trained drivers
+                        </li>
+                        <li style="display: flex; align-items: center; gap: 12px; font-size: 0.95rem; color: #334155;">
+                            <i class="fas fa-check-circle" style="color: var(--primary-yellow); font-size: 1.2rem;"></i>
+                            Available for daily, weekly, or one-off bookings
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- CTA Section -->
+            <div style="background: linear-gradient(135deg, #111418 0%, #1a1e24 100%); padding: 40px; border-radius: 16px; text-align: center; color: white; margin-top: 40px; box-shadow: var(--card-shadow);">
+                <h3 style="font-size: 1.5rem; font-weight: 800; margin-bottom: 12px; color: #ffffff;">Book Your Ride Now →</h3>
+                <p style="color: #cbd5e1; font-size: 0.95rem; margin-bottom: 25px; max-width: 600px; margin-left: auto; margin-right: auto;">Get instant confirmation. Choose your preferred booking method below:</p>
+                <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
+                    <a href="https://wa.me/919187710319?text=Hello%20Kanasu%20Cabs,%20I%20want%20to%20book%20a%20local%20cab." target="_blank" class="btn-yellow" style="background-color: #25d366; color: white; padding: 12px 28px; border-radius: 50px;"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                    <a href="tel:9187710319" class="btn-yellow" style="background-color: #ffffff; color: #000000; padding: 12px 28px; border-radius: 50px;"><i class="fas fa-phone-alt"></i> Call</a>
+                    <a href="#book" class="btn-yellow" style="padding: 12px 28px; border-radius: 50px;">Booking Form</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials-section">
+        <div class="section-title-wrap">
+            <span class="section-subtitle">TESTIMONIALS</span>
+            <h2 class="section-title">What Our Customers Say</h2>
+        </div>
+
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="quote-icon">“</div>
+                <p class="testimonial-text">Excellent local cab service! Hired their 8hr package for shopping in Commercial Street and Chickpet. The driver knew the parking spots and traffic shortcuts. Spotless Sedan.</p>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <div class="client-info">
+                    <h4>Karthik P.</h4>
+                    <span>Bangalore</span>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="quote-icon">“</div>
+                <p class="testimonial-text">We regularly book Kanasu Cabs for my parents' hospital visits in Bangalore. Very polite drivers who assist them patiently. Consistent and clean cabs.</p>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <div class="client-info">
+                    <h4>Malini R.</h4>
+                    <span>Whitefield, Bangalore</span>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="quote-icon">“</div>
+                <p class="testimonial-text">Best local cab service in Bangalore. Transparent package pricing and no unexpected extra charges. The Dzire was well maintained and driver was on time.</p>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <div class="client-info">
+                    <h4>Vinay G.</h4>
+                    <span>Indiranagar, Bangalore</span>
+                </div>
             </div>
         </div>
     </section>

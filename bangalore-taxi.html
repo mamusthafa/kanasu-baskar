@@ -14,11 +14,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Kanasu Cabs - Bangalore Airport Taxi Service. Punctual 24/7 Kempegowda International Airport (BLR) pickup & drop taxi service at fixed low rates.">
+        content="Kanasu Cabs - Bangalore's Trusted Local Taxi Service. Reliable city cabs for daily commutes, shopping trips, events, and hourly rentals at transparent rates.">
     <meta name="keywords"
-        content="Bangalore Airport Taxi, BLR Airport Cab, Airport Pickup Bangalore, Airport Drop Taxi Bangalore, Kanasu Cabs Airport Taxi">
+        content="Bangalore Taxi Service, Local Taxi Bangalore, Bangalore City Cab, Hire Local Cab Bangalore, Kanasu Cabs Bangalore Taxi">
     <meta name="author" content="Kanasu Cabs">
-    <title>Bangalore Airport Taxi Service - Kanasu Cabs | 24/7 Fixed Fare BLR Cabs</title>
+    <title>Bangalore's Trusted Local Taxi Service - Kanasu Cabs</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -366,6 +366,20 @@
             line-height: 1.55;
         }
 
+        .info-price {
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: #1e293b;
+            margin-top: 10px;
+        }
+
+        .info-price span {
+            font-size: 0.68rem;
+            color: var(--primary-yellow);
+            display: block;
+            font-weight: 700;
+        }
+
         .footer {
             background-color: #0b0d0f;
             color: #94a3b8;
@@ -613,16 +627,16 @@
     <section class="page-hero">
         <div class="page-hero-container">
             <div>
-                <h1>Bangalore Airport Taxi <span>— Book in Under a Minute</span></h1>
-                <p>On-time pickups and drops to Kempegowda International Airport, with fixed fares and no surge pricing
-                    — anytime, day or night.</p>
-                <a href="#book" class="btn-yellow">Book Your Airport Cab Now →</a>
+                <h1>Bangalore's Trusted Local Taxi Service <span>— Reliable City Cabs</span></h1>
+                <p>Reliable city cabs for daily commutes, events, shopping trips, and everything in between — sedans,
+                    SUVs, and Innovas available.</p>
+                <a href="#book" class="btn-yellow">Book a Local Cab Today →</a>
             </div>
 
             <div class="hero-form-card" id="book">
                 <div class="form-header">
-                    <h2>BOOK <span>AIRPORT TAXI</span></h2>
-                    <p>Instant confirmation for BLR Airport pickup/drop</p>
+                    <h2>BOOK <span>LOCAL CAB</span></h2>
+                    <p>Instant booking confirmation via WhatsApp</p>
                 </div>
                 <form class="enquiry-form" id="enquiryForm" onsubmit="handleFormSubmit(event)">
                     <div class="input-group">
@@ -635,11 +649,16 @@
                     </div>
                     <div class="input-group">
                         <i class="fas fa-map-marker-alt"></i>
-                        <input type="text" id="pickupLocation" placeholder="Pickup (Bangalore City / Airport)" required>
+                        <input type="text" id="pickupLocation" placeholder="Pickup Area in Bangalore" required>
                     </div>
                     <div class="input-group">
-                        <i class="fas fa-location-arrow"></i>
-                        <input type="text" id="dropLocation" placeholder="Drop (Airport / Bangalore City)" required>
+                        <i class="fas fa-clock"></i>
+                        <select id="packageType" required>
+                            <option value="" disabled selected>Select Hourly Package</option>
+                            <option value="4 Hours / 40 KM">4 Hours / 40 KM Package</option>
+                            <option value="8 Hours / 80 KM">8 Hours / 80 KM Full Day Package</option>
+                            <option value="12 Hours / 120 KM">12 Hours / 120 KM Extended Package</option>
+                        </select>
                     </div>
                     <div class="input-group">
                         <i class="far fa-calendar-alt"></i>
@@ -657,33 +676,58 @@
                     </div>
                     <div class="input-group">
                         <i class="far fa-envelope"></i>
-                        <textarea id="userMessage"
-                            placeholder="Flight Number / Flight Arrival Time (Optional)"></textarea>
+                        <textarea id="userMessage" placeholder="Special Instructions / Trip Purpose"></textarea>
                     </div>
-                    <button type="submit" class="btn-quote"><i class="fab fa-whatsapp"></i> BOOK AIRPORT TAXI VIA
+                    <button type="submit" class="btn-quote"><i class="fab fa-whatsapp"></i> BOOK LOCAL CAB VIA
                         WHATSAPP</button>
                 </form>
             </div>
         </div>
     </section>
 
-    <!-- AIRPORT TAXI FEATURES & DETAILS -->
+    <!-- LOCAL HOURLY PACKAGES -->
     <section class="section-padding">
+        <div class="section-title-wrap">
+            <span class="section-subtitle">LOCAL HOURLY TARIFF</span>
+            <h2 class="section-title">Flexible City Travel Packages</h2>
+        </div>
+
+        <div class="grid-3">
+            <div class="info-card">
+                <h3><i class="fas fa-history" style="color:var(--primary-yellow);"></i> 4 Hours / 40 KM</h3>
+                <p>Perfect for quick half-day errands, railway station pick/drop, or quick doctor visits in Bangalore.
+                </p>
+                <div class="info-price">₹1,199 <span>STARTING TARIFF</span></div>
+            </div>
+            <div class="info-card">
+                <h3><i class="fas fa-sun" style="color:var(--primary-yellow);"></i> 8 Hours / 80 KM</h3>
+                <p>Most popular full-day package for city shopping, multi-stop business meetings, or temple visits.</p>
+                <div class="info-price">₹1,999 <span>STARTING TARIFF</span></div>
+            </div>
+            <div class="info-card">
+                <h3><i class="fas fa-moon" style="color:var(--primary-yellow);"></i> 12 Hours / 120 KM</h3>
+                <p>Extended full-day rental for exploring all corners of Bangalore city without worrying about meter
+                    charges.</p>
+                <div class="info-price">₹2,699 <span>STARTING TARIFF</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LOCAL FEATURES & DETAILS -->
+    <section class="section-padding" style="background-color: #f8fafc; border-top: 1px solid var(--border-color);">
         <div style="max-width: 1240px; margin: 0 auto; padding: 0 20px;">
             <div
                 style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 40px; align-items: start; margin-bottom: 40px;">
                 <div>
                     <span class="section-subtitle">ABOUT OUR SERVICE</span>
-                    <h2 class="section-title" style="margin-bottom: 20px; font-size: 1.8rem;">Bangalore Airport Taxi
-                    </h2>
-                    <p style="font-size: 1rem; color: #475569; line-height: 1.7; margin-bottom: 20px;">Flying in or out
-                        of Bangalore? Kanasu Cabs offers reliable airport taxi service with verified, trained drivers
-                        and clean, well-maintained sedans and SUVs. We track your flight timings so your driver is
-                        always ready, whether you're landing at 3 AM or catching an early flight. No hidden charges —
-                        the fare you're quoted is the fare you pay.</p>
+                    <h2 class="section-title" style="margin-bottom: 20px; font-size: 1.8rem;">Bangalore City Taxi</h2>
+                    <p style="font-size: 1rem; color: #475569; line-height: 1.7; margin-bottom: 20px;">Need a dependable
+                        cab within Bangalore city? Kanasu Cabs offers local taxi service with prompt pickups, courteous
+                        drivers, and fair, meter-transparent fares. From daily office commutes to special occasions,
+                        we're built for reliability across every corner of the city.</p>
                     <p
                         style="font-size: 1rem; font-weight: 600; color: #1e293b; border-left: 3px solid var(--primary-yellow); padding-left: 12px; margin-top: 25px;">
-                        Trusted by thousands of Bangalore travelers for stress-free airport transfers.</p>
+                        A local taxi service Bangalore residents rely on every day.</p>
                 </div>
 
                 <div>
@@ -692,23 +736,23 @@
                     <ul style="display: flex; flex-direction: column; gap: 15px; margin-top: 15px;">
                         <li style="display: flex; align-items: center; gap: 12px; font-size: 0.95rem; color: #334155;">
                             <i class="fas fa-check-circle" style="color: var(--primary-yellow); font-size: 1.2rem;"></i>
-                            24x7 airport pickup and drop
+                            Prompt local pickups anywhere in Bangalore
                         </li>
                         <li style="display: flex; align-items: center; gap: 12px; font-size: 0.95rem; color: #334155;">
                             <i class="fas fa-check-circle" style="color: var(--primary-yellow); font-size: 1.2rem;"></i>
-                            Fixed, transparent fares — no surge pricing
+                            Fair, transparent fares
                         </li>
                         <li style="display: flex; align-items: center; gap: 12px; font-size: 0.95rem; color: #334155;">
                             <i class="fas fa-check-circle" style="color: var(--primary-yellow); font-size: 1.2rem;"></i>
-                            Flight tracking for accurate pickup timing
+                            Sedan, SUV, and Innova options
                         </li>
                         <li style="display: flex; align-items: center; gap: 12px; font-size: 0.95rem; color: #334155;">
                             <i class="fas fa-check-circle" style="color: var(--primary-yellow); font-size: 1.2rem;"></i>
-                            Sedan, SUV and Innova options
+                            Verified, well-trained drivers
                         </li>
                         <li style="display: flex; align-items: center; gap: 12px; font-size: 0.95rem; color: #334155;">
                             <i class="fas fa-check-circle" style="color: var(--primary-yellow); font-size: 1.2rem;"></i>
-                            Verified, background-checked drivers
+                            Available for daily, weekly, or one-off bookings
                         </li>
                     </ul>
                 </div>
@@ -717,13 +761,13 @@
             <!-- CTA Section -->
             <div
                 style="background: linear-gradient(135deg, #111418 0%, #1a1e24 100%); padding: 40px; border-radius: 16px; text-align: center; color: white; margin-top: 40px; box-shadow: var(--card-shadow);">
-                <h3 style="font-size: 1.5rem; font-weight: 800; margin-bottom: 12px; color: #ffffff;">Book Your Airport
-                    Cab Now →</h3>
+                <h3 style="font-size: 1.5rem; font-weight: 800; margin-bottom: 12px; color: #ffffff;">Book Your Ride Now
+                    →</h3>
                 <p
                     style="color: #cbd5e1; font-size: 0.95rem; margin-bottom: 25px; max-width: 600px; margin-left: auto; margin-right: auto;">
                     Get instant confirmation. Choose your preferred booking method below:</p>
                 <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
-                    <a href="https://wa.me/919187710319?text=Hello%20Kanasu%20Cabs,%20I%20want%20to%20book%20an%20airport%20taxi."
+                    <a href="https://wa.me/919187710319?text=Hello%20Kanasu%20Cabs,%20I%20want%20to%20book%20a%20local%20cab."
                         target="_blank" class="btn-yellow"
                         style="background-color: #25d366; color: white; padding: 12px 28px; border-radius: 50px;"><i
                             class="fab fa-whatsapp"></i> WhatsApp</a>
@@ -746,8 +790,9 @@
         <div class="testimonials-grid">
             <div class="testimonial-card">
                 <div class="quote-icon">“</div>
-                <p class="testimonial-text">We booked an airport transfer from Whitefield to BLR Airport at 3 AM. The
-                    cab arrived 10 minutes early. Professional drivers and transparent pricing!</p>
+                <p class="testimonial-text">Excellent local cab service! Hired their 8hr package for shopping in
+                    Commercial Street and Chickpet. The driver knew the parking spots and traffic shortcuts. Spotless
+                    Sedan.</p>
                 <div class="rating">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -756,15 +801,15 @@
                     <i class="fas fa-star"></i>
                 </div>
                 <div class="client-info">
-                    <h4>Priya S.</h4>
+                    <h4>Karthik P.</h4>
                     <span>Bangalore</span>
                 </div>
             </div>
 
             <div class="testimonial-card">
                 <div class="quote-icon">“</div>
-                <p class="testimonial-text">Punctual airport pickup! My flight got delayed by an hour, but Kanasu Cabs
-                    tracked it and the driver was waiting at the arrivals. Clean car and smooth ride.</p>
+                <p class="testimonial-text">We regularly book Kanasu Cabs for my parents' hospital visits in Bangalore.
+                    Very polite drivers who assist them patiently. Consistent and clean cabs.</p>
                 <div class="rating">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -773,15 +818,15 @@
                     <i class="fas fa-star"></i>
                 </div>
                 <div class="client-info">
-                    <h4>Sandeep K.</h4>
-                    <span>Bangalore Traveler</span>
+                    <h4>Malini R.</h4>
+                    <span>Whitefield, Bangalore</span>
                 </div>
             </div>
 
             <div class="testimonial-card">
                 <div class="quote-icon">“</div>
-                <p class="testimonial-text">No surge pricing is the best part. Standard fixed rate from airport to
-                    Electronic City. Highly recommend their airport cab service!</p>
+                <p class="testimonial-text">Best local cab service in Bangalore. Transparent package pricing and no
+                    unexpected extra charges. The Dzire was well maintained and driver was on time.</p>
                 <div class="rating">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -790,8 +835,8 @@
                     <i class="fas fa-star"></i>
                 </div>
                 <div class="client-info">
-                    <h4>Ananya M.</h4>
-                    <span>Bangalore Resident</span>
+                    <h4>Vinay G.</h4>
+                    <span>Indiranagar, Bangalore</span>
                 </div>
             </div>
         </div>
@@ -812,7 +857,7 @@
             const name = document.getElementById('userName').value.trim();
             const mobile = document.getElementById('userMobile').value.trim();
             const pickup = document.getElementById('pickupLocation').value.trim();
-            const drop = document.getElementById('dropLocation').value.trim();
+            const pkg = document.getElementById('packageType').value;
             const rawDate = document.getElementById('travelDate').value;
             const carSelect = document.getElementById('carType');
             const carText = carSelect.options[carSelect.selectedIndex].text;
@@ -824,15 +869,15 @@
                 if (p.length === 3) formattedDate = `${p[2]}-${p[1]}-${p[0]}`;
             }
 
-            let text = `*New Airport Taxi Booking - Kanasu Cabs*%0A` +
+            let text = `*New Local Cab Booking - Kanasu Cabs*%0A` +
                 `*Name:* ${encodeURIComponent(name)}%0A` +
                 `*Mobile:* ${encodeURIComponent(mobile)}%0A` +
-                `*Service:* Airport Taxi Transfer%0A` +
-                `*Pickup:* ${encodeURIComponent(pickup)}%0A` +
-                `*Drop:* ${encodeURIComponent(drop)}%0A` +
+                `*Service:* Local Hourly Cab%0A` +
+                `*Package:* ${encodeURIComponent(pkg)}%0A` +
+                `*Pickup Area:* ${encodeURIComponent(pickup)}%0A` +
                 `*Date:* ${encodeURIComponent(formattedDate)}%0A` +
                 `*Car Selected:* ${encodeURIComponent(carText)}%0A`;
-            if (message) text += `*Flight Details:* ${encodeURIComponent(message)}%0A`;
+            if (message) text += `*Notes:* ${encodeURIComponent(message)}%0A`;
 
             window.open(`https://wa.me/919187710319?text=${text}`, '_blank');
         }

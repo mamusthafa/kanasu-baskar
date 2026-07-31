@@ -14,11 +14,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Kanasu Cabs - Bangalore Airport Taxi Service. Punctual 24/7 Kempegowda International Airport (BLR) pickup & drop taxi service at fixed low rates.">
+        content="Book cabs from Bangalore to Coorg, Mysore, Ooty, and Chennai. Fixed fares, comfortable rides, and experienced highway drivers with Kanasu Cabs.">
     <meta name="keywords"
-        content="Bangalore Airport Taxi, BLR Airport Cab, Airport Pickup Bangalore, Airport Drop Taxi Bangalore, Kanasu Cabs Airport Taxi">
+        content="Bangalore to Mysore Cab, Bangalore to Coorg Cab, Bangalore to Ooty Cab, Bangalore to Chennai Cab, Getaway Cabs Bangalore, Kanasu Cabs Outstation">
     <meta name="author" content="Kanasu Cabs">
-    <title>Bangalore Airport Taxi Service - Kanasu Cabs | 24/7 Fixed Fare BLR Cabs</title>
+    <title>Bangalore to Coorg, Mysore & Ooty Cabs - Kanasu Cabs | Fixed Getaway Fares</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -329,16 +329,17 @@
             color: #1a1e24;
         }
 
-        .grid-3 {
+        /* ROUTES GRID (Custom to fit 4 getaway targets nicely) */
+        .routes-grid {
             max-width: 1240px;
             margin: 0 auto;
             padding: 0 20px;
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
             gap: 24px;
         }
 
-        .info-card {
+        .route-card {
             background: #ffffff;
             border: 1px solid var(--border-color);
             border-radius: 12px;
@@ -347,23 +348,44 @@
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
         }
 
-        .info-card:hover {
+        .route-card:hover {
             transform: translateY(-5px);
             border-color: var(--primary-yellow);
             box-shadow: var(--card-shadow);
         }
 
-        .info-card h3 {
+        .route-card h3 {
             font-size: 1.15rem;
             font-weight: 700;
             margin-bottom: 8px;
             color: #1e293b;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
 
-        .info-card p {
+        .route-card h3 i {
+            color: var(--primary-yellow);
+        }
+
+        .route-card p {
             font-size: 0.84rem;
             color: #64748b;
             line-height: 1.55;
+            margin-bottom: 12px;
+        }
+
+        .route-price {
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: #1e293b;
+        }
+
+        .route-price span {
+            font-size: 0.68rem;
+            color: var(--primary-yellow);
+            display: block;
+            font-weight: 700;
         }
 
         .footer {
@@ -450,7 +472,7 @@
         @media (max-width: 900px) {
 
             .page-hero-container,
-            .grid-3,
+            .routes-grid,
             .footer-container {
                 grid-template-columns: 1fr !important;
             }
@@ -517,7 +539,7 @@
             }
 
             .page-hero-container,
-            .grid-3,
+            .routes-grid,
             .footer-container {
                 grid-template-columns: 1fr !important;
                 gap: 20px;
@@ -613,16 +635,16 @@
     <section class="page-hero">
         <div class="page-hero-container">
             <div>
-                <h1>Bangalore Airport Taxi <span>— Book in Under a Minute</span></h1>
-                <p>On-time pickups and drops to Kempegowda International Airport, with fixed fares and no surge pricing
-                    — anytime, day or night.</p>
-                <a href="#book" class="btn-yellow">Book Your Airport Cab Now →</a>
+                <h1>Bangalore to Coorg, Mysore & Ooty Cabs <span>— Fixed Fares, Comfortable Rides</span></h1>
+                <p>Planning a weekend getaway or a family holiday? Book a cab from Bangalore to Coorg, Mysore, or Ooty
+                    with transparent, all-inclusive pricing.</p>
+                <a href="#book" class="btn-yellow">Book Your Getaway Cab →</a>
             </div>
 
             <div class="hero-form-card" id="book">
                 <div class="form-header">
-                    <h2>BOOK <span>AIRPORT TAXI</span></h2>
-                    <p>Instant confirmation for BLR Airport pickup/drop</p>
+                    <h2>GETAWAY <span>CAB BOOKING</span></h2>
+                    <p>Fixed fares & route-expert drivers</p>
                 </div>
                 <form class="enquiry-form" id="enquiryForm" onsubmit="handleFormSubmit(event)">
                     <div class="input-group">
@@ -635,11 +657,17 @@
                     </div>
                     <div class="input-group">
                         <i class="fas fa-map-marker-alt"></i>
-                        <input type="text" id="pickupLocation" placeholder="Pickup (Bangalore City / Airport)" required>
+                        <input type="text" id="pickupLocation" value="Bangalore" placeholder="Pickup Location" required>
                     </div>
                     <div class="input-group">
                         <i class="fas fa-location-arrow"></i>
-                        <input type="text" id="dropLocation" placeholder="Drop (Airport / Bangalore City)" required>
+                        <select id="dropLocation" required>
+                            <option value="" disabled selected>Select Destination</option>
+                            <option value="Mysore">Mysore</option>
+                            <option value="Coorg">Coorg</option>
+                            <option value="Ooty">Ooty</option>
+                            <option value="Chennai">Chennai</option>
+                        </select>
                     </div>
                     <div class="input-group">
                         <i class="far fa-calendar-alt"></i>
@@ -658,32 +686,63 @@
                     <div class="input-group">
                         <i class="far fa-envelope"></i>
                         <textarea id="userMessage"
-                            placeholder="Flight Number / Flight Arrival Time (Optional)"></textarea>
+                            placeholder="Special requests (e.g. sightseeing duration, return details)"></textarea>
                     </div>
-                    <button type="submit" class="btn-quote"><i class="fab fa-whatsapp"></i> BOOK AIRPORT TAXI VIA
+                    <button type="submit" class="btn-quote"><i class="fab fa-whatsapp"></i> BOOK TAXI VIA
                         WHATSAPP</button>
                 </form>
             </div>
         </div>
     </section>
 
-    <!-- AIRPORT TAXI FEATURES & DETAILS -->
-    <section class="section-padding">
+    <!-- FARE ESTIMATION GRID -->
+    <section class="section-padding" style="background-color: #ffffff;">
+        <div class="section-title-wrap">
+            <span class="section-subtitle">POPULAR GETAWAYS</span>
+            <h2 class="section-title">Starting Fares for Getaway Cabs</h2>
+        </div>
+
+        <div class="routes-grid">
+            <div class="route-card">
+                <h3><i class="fas fa-car-side"></i> Bangalore → Mysore</h3>
+                <p>Enjoy palace sightseeing. Distance: ~140 KM. Doorstep pickup and dropping included.</p>
+                <div class="route-price">from ₹2,499 <span>ONEWAY DROP FARE</span></div>
+            </div>
+            <div class="route-card">
+                <h3><i class="fas fa-car-side"></i> Bangalore → Coorg</h3>
+                <p>Visit coffee estates in Madikeri & Kushalnagar. Distance: ~240 KM. Hill highway travel.</p>
+                <div class="route-price">from ₹3,999 <span>ONEWAY DROP FARE</span></div>
+            </div>
+            <div class="route-card">
+                <h3><i class="fas fa-car-side"></i> Bangalore → Ooty</h3>
+                <p>Travel through tea gardens and Nilgiri hills. Distance: ~270 KM. Experienced ghat drivers.</p>
+                <div class="route-price">from ₹4,499 <span>ONEWAY DROP FARE</span></div>
+            </div>
+            <div class="route-card">
+                <h3><i class="fas fa-car-side"></i> Bangalore → Chennai</h3>
+                <p>Expressway ride to the coast. Distance: ~350 KM. Fixed transparent toll allowance options.</p>
+                <div class="route-price">from ₹5,499 <span>ONEWAY DROP FARE</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DETAILS & FEATURES -->
+    <section class="section-padding" style="background-color: #f8fafc; border-top: 1px solid var(--border-color);">
         <div style="max-width: 1240px; margin: 0 auto; padding: 0 20px;">
             <div
                 style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 40px; align-items: start; margin-bottom: 40px;">
                 <div>
                     <span class="section-subtitle">ABOUT OUR SERVICE</span>
-                    <h2 class="section-title" style="margin-bottom: 20px; font-size: 1.8rem;">Bangalore Airport Taxi
-                    </h2>
-                    <p style="font-size: 1rem; color: #475569; line-height: 1.7; margin-bottom: 20px;">Flying in or out
-                        of Bangalore? Kanasu Cabs offers reliable airport taxi service with verified, trained drivers
-                        and clean, well-maintained sedans and SUVs. We track your flight timings so your driver is
-                        always ready, whether you're landing at 3 AM or catching an early flight. No hidden charges —
-                        the fare you're quoted is the fare you pay.</p>
+                    <h2 class="section-title" style="margin-bottom: 20px; font-size: 1.8rem;">Bangalore Outstation
+                        Getaways</h2>
+                    <p style="font-size: 1rem; color: #475569; line-height: 1.7; margin-bottom: 20px;">Kanasu Cabs
+                        specializes in popular hill-station and getaway routes from Bangalore. Whether you're headed to
+                        the coffee estates of Coorg, the palaces of Mysore, or the tea gardens of Ooty, our drivers know
+                        these roads well and our fares are fixed upfront — no per-km surprises when you reach your
+                        destination.</p>
                     <p
                         style="font-size: 1rem; font-weight: 600; color: #1e293b; border-left: 3px solid var(--primary-yellow); padding-left: 12px; margin-top: 25px;">
-                        Trusted by thousands of Bangalore travelers for stress-free airport transfers.</p>
+                        The preferred cab service for Bangalore's favorite weekend destinations.</p>
                 </div>
 
                 <div>
@@ -692,23 +751,23 @@
                     <ul style="display: flex; flex-direction: column; gap: 15px; margin-top: 15px;">
                         <li style="display: flex; align-items: center; gap: 12px; font-size: 0.95rem; color: #334155;">
                             <i class="fas fa-check-circle" style="color: var(--primary-yellow); font-size: 1.2rem;"></i>
-                            24x7 airport pickup and drop
+                            Fixed fares for Coorg, Mysore, Ooty & Chennai routes
                         </li>
                         <li style="display: flex; align-items: center; gap: 12px; font-size: 0.95rem; color: #334155;">
                             <i class="fas fa-check-circle" style="color: var(--primary-yellow); font-size: 1.2rem;"></i>
-                            Fixed, transparent fares — no surge pricing
+                            Drivers experienced on hill and highway routes
                         </li>
                         <li style="display: flex; align-items: center; gap: 12px; font-size: 0.95rem; color: #334155;">
                             <i class="fas fa-check-circle" style="color: var(--primary-yellow); font-size: 1.2rem;"></i>
-                            Flight tracking for accurate pickup timing
+                            Comfortable sedans, SUVs & Innovas
                         </li>
                         <li style="display: flex; align-items: center; gap: 12px; font-size: 0.95rem; color: #334155;">
                             <i class="fas fa-check-circle" style="color: var(--primary-yellow); font-size: 1.2rem;"></i>
-                            Sedan, SUV and Innova options
+                            Easy round-trip or one-way booking
                         </li>
                         <li style="display: flex; align-items: center; gap: 12px; font-size: 0.95rem; color: #334155;">
                             <i class="fas fa-check-circle" style="color: var(--primary-yellow); font-size: 1.2rem;"></i>
-                            Verified, background-checked drivers
+                            24x7 support for trip planning
                         </li>
                     </ul>
                 </div>
@@ -717,13 +776,13 @@
             <!-- CTA Section -->
             <div
                 style="background: linear-gradient(135deg, #111418 0%, #1a1e24 100%); padding: 40px; border-radius: 16px; text-align: center; color: white; margin-top: 40px; box-shadow: var(--card-shadow);">
-                <h3 style="font-size: 1.5rem; font-weight: 800; margin-bottom: 12px; color: #ffffff;">Book Your Airport
-                    Cab Now →</h3>
+                <h3 style="font-size: 1.5rem; font-weight: 800; margin-bottom: 12px; color: #ffffff;">Book Your Getaway
+                    Cab →</h3>
                 <p
                     style="color: #cbd5e1; font-size: 0.95rem; margin-bottom: 25px; max-width: 600px; margin-left: auto; margin-right: auto;">
                     Get instant confirmation. Choose your preferred booking method below:</p>
                 <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
-                    <a href="https://wa.me/919187710319?text=Hello%20Kanasu%20Cabs,%20I%20want%20to%20book%20an%20airport%20taxi."
+                    <a href="https://wa.me/919187710319?text=Hello%20Kanasu%20Cabs,%20I%20want%20to%20book%20a%20getaway%20cab."
                         target="_blank" class="btn-yellow"
                         style="background-color: #25d366; color: white; padding: 12px 28px; border-radius: 50px;"><i
                             class="fab fa-whatsapp"></i> WhatsApp</a>
@@ -746,8 +805,9 @@
         <div class="testimonials-grid">
             <div class="testimonial-card">
                 <div class="quote-icon">“</div>
-                <p class="testimonial-text">We booked an airport transfer from Whitefield to BLR Airport at 3 AM. The
-                    cab arrived 10 minutes early. Professional drivers and transparent pricing!</p>
+                <p class="testimonial-text">Perfect weekend getaway trip to Coorg! The driver was very familiar with the
+                    local sights and viewpoints. The Innova Crysta made the hilly curves comfortable. Highly recommend
+                    Kanasu Cabs!</p>
                 <div class="rating">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -756,15 +816,16 @@
                     <i class="fas fa-star"></i>
                 </div>
                 <div class="client-info">
-                    <h4>Priya S.</h4>
+                    <h4>Harish L.</h4>
                     <span>Bangalore</span>
                 </div>
             </div>
 
             <div class="testimonial-card">
                 <div class="quote-icon">“</div>
-                <p class="testimonial-text">Punctual airport pickup! My flight got delayed by an hour, but Kanasu Cabs
-                    tracked it and the driver was waiting at the arrivals. Clean car and smooth ride.</p>
+                <p class="testimonial-text">Booked a round trip to Ooty. We were a group of 5, and the vehicle was
+                    exceptionally clean and smooth. Driver was extremely polite and professional. Fixed pricing was
+                    peace of mind.</p>
                 <div class="rating">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -773,15 +834,15 @@
                     <i class="fas fa-star"></i>
                 </div>
                 <div class="client-info">
-                    <h4>Sandeep K.</h4>
-                    <span>Bangalore Traveler</span>
+                    <h4>Rashmi P.</h4>
+                    <span>Bangalore</span>
                 </div>
             </div>
 
             <div class="testimonial-card">
                 <div class="quote-icon">“</div>
-                <p class="testimonial-text">No surge pricing is the best part. Standard fixed rate from airport to
-                    Electronic City. Highly recommend their airport cab service!</p>
+                <p class="testimonial-text">We took a drop cab from Bangalore to Chennai. Best rate and professional
+                    service. Hassle-free travel on the highway. We will definitely book with them again.</p>
                 <div class="rating">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -790,8 +851,8 @@
                     <i class="fas fa-star"></i>
                 </div>
                 <div class="client-info">
-                    <h4>Ananya M.</h4>
-                    <span>Bangalore Resident</span>
+                    <h4>Aditya J.</h4>
+                    <span>Bangalore</span>
                 </div>
             </div>
         </div>
@@ -812,7 +873,7 @@
             const name = document.getElementById('userName').value.trim();
             const mobile = document.getElementById('userMobile').value.trim();
             const pickup = document.getElementById('pickupLocation').value.trim();
-            const drop = document.getElementById('dropLocation').value.trim();
+            const drop = document.getElementById('dropLocation').value;
             const rawDate = document.getElementById('travelDate').value;
             const carSelect = document.getElementById('carType');
             const carText = carSelect.options[carSelect.selectedIndex].text;
@@ -824,15 +885,15 @@
                 if (p.length === 3) formattedDate = `${p[2]}-${p[1]}-${p[0]}`;
             }
 
-            let text = `*New Airport Taxi Booking - Kanasu Cabs*%0A` +
+            let text = `*New Getaway Cab Booking - Kanasu Cabs*%0A` +
                 `*Name:* ${encodeURIComponent(name)}%0A` +
                 `*Mobile:* ${encodeURIComponent(mobile)}%0A` +
-                `*Service:* Airport Taxi Transfer%0A` +
+                `*Service:* Getaway Cab%0A` +
                 `*Pickup:* ${encodeURIComponent(pickup)}%0A` +
-                `*Drop:* ${encodeURIComponent(drop)}%0A` +
+                `*Destination:* ${encodeURIComponent(drop)}%0A` +
                 `*Date:* ${encodeURIComponent(formattedDate)}%0A` +
                 `*Car Selected:* ${encodeURIComponent(carText)}%0A`;
-            if (message) text += `*Flight Details:* ${encodeURIComponent(message)}%0A`;
+            if (message) text += `*Notes:* ${encodeURIComponent(message)}%0A`;
 
             window.open(`https://wa.me/919187710319?text=${text}`, '_blank');
         }
